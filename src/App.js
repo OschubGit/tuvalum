@@ -1,25 +1,31 @@
 import React from "react";
+import { BounceLoader } from "react-spinners";
 import logo from "./logo.svg";
-import customFetch from "./utils/fetchProducts";
+import {getProducts} from "./utils/api/products.api"
 
 function App() {
-  const [product, setProduct] = React.useState([]);
-  
+  const [products, setProducts] = React.useState([]);
+
   React.useEffect(() => {
-    customFetch(2000, fetch('http://localhost:3004/products'))
-        .then(response => response.json())
-        .then((data) => setProduct(data))
-        .catch(err => console.error(err));
-  
+    const fetchData = async () => {
+      const products = await getProducts();
+      setProducts(products.data);
+    };
+    fetchData();
   }, []);
+
+  console.log(process.env)
+  console.log(products)
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Productos</p>
-        {product && product.map((m, index) => (
-          <p>{m.title}</p>
+        {products.length === 0 ? (
+          <BounceLoader/>
+        ) : products.map((m, index) => (
+          <p key={index}>{m.title}</p>
         ))}
       </header>
     </div>
