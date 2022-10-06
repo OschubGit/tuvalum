@@ -4,9 +4,10 @@ import Card from "../components/Card";
 import { getProducts } from "../utils/api/products.api";
 import { CartContext } from "../utils/context/cartContext";
 import Button from "../components/Button";
+import Pagination from "../components/Pagination";
 
 const ProductsList = () => {
-  const test = useContext(CartContext);
+  const ctx = useContext(CartContext);
   const [products, setProducts] = React.useState([]);
   const paginationDefault = 1;
   const [currentPage, setCurrentPage] = React.useState(paginationDefault);
@@ -25,12 +26,11 @@ const ProductsList = () => {
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + paginationDefault);
-    test.addToCart();
+    ctx.addToCart();
   };
 
   const handleAddToCart = (product) => {
-    test.addToCart({ product });
-    console.log(product);
+    ctx.addToCart({ product });
   };
 
   return products.length === 0 ? (
@@ -44,28 +44,20 @@ const ProductsList = () => {
             key={index}
             title={m.title}
             year={"Año " + m.year}
+            price={m.price}
             src={m.image}
             onclick={() => handleAddToCart(m)}
             action="Añadir"
           />
         ))}
-      <Button
-        type="button"
-        disabled={false}
-        className="cButton cButton-secondary cButton-xs cButton-fullwidth"
-        onClick={handlePrevPage}
-      >
-        Anterior
-      </Button>
-      <span>{currentPage}</span>
-      <Button
-        type="button"
-        disabled={false}
-        className="cButton cButton-secondary cButton-xs cButton-fullwidth"
-        onClick={handleNextPage}
-      >
-        Siguiente
-      </Button>
+      <Pagination
+        handleNextPage={handleNextPage}
+        handlePrevPage={handlePrevPage}
+        currentPage={currentPage}
+        color="primary"
+        fullwidth
+        variant="outlined"
+      />
       </div>
     </>
   );

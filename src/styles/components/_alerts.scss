@@ -1,0 +1,59 @@
+.cAlert{
+    font-size: $typo-size-sm;
+    font-family: $main-family;
+    padding: $padding-xs;
+    background-color: $primary-light;
+    color: $common-white;
+    width: auto;
+    border-radius: 4px;
+    text-align: center;
+    border: 0px;
+}
+
+.cAlert-primary{
+    @extend .cAlert;
+    background-color: $primary-color;
+    color: $common-white;
+}
+
+.cAlert-outlined{
+    @extend .cAlert-primary;
+    border: 0.2px solid $primary-dark;
+    background-color: $common-white;
+    color: $primary-dark;
+}
+
+.cAlert-secondary{
+    @extend .cAlert;
+    background-color: $secondary-color;
+    color: $common-white;
+}
+
+.cAlert-outlined{
+    @extend .cAlert;
+    border: 0.2px solid $secondary-dark;
+    background-color: $common-white;
+    color: $secondary-dark;
+}
+
+.cAlert-fullwidth{
+    @extend .cAlert;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cAlert-xs{
+    @extend .cAlert;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.cAlert-md{
+    @extend .cAlert;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.cAlert-xl{
+    @extend .cAlert;
+    padding: 24px;
+    box-sizing: border-box;
+}

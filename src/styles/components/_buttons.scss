@@ -11,14 +11,13 @@
     cursor: pointer;
 }
 
-.cBuutton:disabled, button[disabled]{
-   @extend .cButton; 
-    border: 0px;
+.cButton:disabled, button[disabled]{
+    @extend .cButton; 
     background-color: $grey300;
-    color: $grey200;
+    color: $grey500;
     &:hover{
-        background-color: $grey400;
-        color: $grey300;
+        background-color: $grey300;
+        color: $grey500;
     }
   }
 
@@ -28,20 +27,6 @@
     color: $common-white;
     &:hover{
         background-color: $primary-dark;
-    }
-}
-
-.cButton-outlined{
-    @extend .cButton;
-    border: 0.2px solid $primary-dark;
-    background-color: $common-white;
-    color: $primary-dark;
-    transition: 0.3s;
-    &:hover{
-        transition: 0.3s;
-        color: $common-white;
-        background-color: $light-blue;
-
     }
 }
 
@@ -55,14 +40,14 @@
 }
 
 .cButton-outlined{
-    @extend .cButton;
+    @extend .cButton-secondary;
     border: 0.2px solid $secondary-dark;
     background-color: $common-white;
     color: $secondary-dark;
     transition: 0.3s;
     &:hover{
         transition: 0.3s;
-        color: $secondary-dark;
+        color: $common-white;
         background-color: $crimson-ua-2;
 
     }
@@ -71,17 +56,21 @@
 .cButton-fullwidth{
     @extend .cButton;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .cButton-xs{
     @extend .cButton;
     padding: 8px;
+    box-sizing: border-box;
 }
 .cButton-md{
     @extend .cButton;
     padding: 16px;
+    box-sizing: border-box;
 }
 .cButton-xl{
     @extend .cButton;
     padding: 24px;
+    box-sizing: border-box;
 }
