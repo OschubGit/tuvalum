@@ -6,6 +6,7 @@ export const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = React.useState([]);
   const [total, setTotal] = React.useState()
+  const [active, setActive] = React.useState(false);
   const initialValue = 0;
 
   React.useEffect(() => {
@@ -16,6 +17,10 @@ const CartContextProvider = ({ children }) => {
     );
     setTotal(result)
   },[cart])
+
+  const activeMenu = () => {
+    setActive(!active)
+  }
 
   const addToCart = ({product}) => {
     const itemDuplicated = cart.findIndex((f) => f.id === product.id);
@@ -44,7 +49,7 @@ const CartContextProvider = ({ children }) => {
   }
 
   return (
-    <CartContext.Provider value={{ addToCart, cart, total, deleteItemFromCard, deleteCart }}>
+    <CartContext.Provider value={{ addToCart, cart, total, deleteItemFromCard, deleteCart, activeMenu, active }}>
       {children}
     </CartContext.Provider>
   );

@@ -1,11 +1,11 @@
 .cAlert{
+    @include rounded(4px);
     font-size: $typo-size-sm;
     font-family: $main-family;
     padding: $padding-xs;
     background-color: $primary-light;
     color: $common-white;
     width: auto;
-    border-radius: 4px;
     text-align: center;
     border: 0px;
 }
@@ -38,22 +38,22 @@
 
 .cAlert-fullwidth{
     @extend .cAlert;
+    @include border-box;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .cAlert-xs{
     @extend .cAlert;
     padding: 8px;
-    box-sizing: border-box;
+    @include border-box;
 }
 .cAlert-md{
     @extend .cAlert;
+    @include border-box;
     padding: 16px;
-    box-sizing: border-box;
 }
 .cAlert-xl{
     @extend .cAlert;
+    @include border-box;
     padding: 24px;
-    box-sizing: border-box;
 }

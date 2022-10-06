@@ -3,8 +3,8 @@ import { BounceLoader } from "react-spinners";
 import Card from "../components/Card";
 import { getProducts } from "../utils/api/products.api";
 import { CartContext } from "../utils/context/cartContext";
-import Button from "../components/Button";
 import Pagination from "../components/Pagination";
+import Title from "../components/Title";
 
 const ProductsList = () => {
   const ctx = useContext(CartContext);
@@ -37,7 +37,9 @@ const ProductsList = () => {
     <BounceLoader />
   ) : (
     <>
-      <span className="title-md">Productos</span>
+      <div className="layout__title">
+        <Title text={"Productos"} size={"md"}/>
+      </div>
       <div className="layout__main">
         {products.map((m, index) => (
           <Card
@@ -50,14 +52,16 @@ const ProductsList = () => {
             action="Añadir"
           />
         ))}
-      <Pagination
-        handleNextPage={handleNextPage}
-        handlePrevPage={handlePrevPage}
-        currentPage={currentPage}
-        color="primary"
-        fullwidth
-        variant="outlined"
-      />
+        <div></div>
+          <Pagination
+            handleNextPage={handleNextPage}
+            handlePrevPage={handlePrevPage}
+            currentPage={currentPage}
+            color="primary"
+            fullwidth
+            variant="outlined"
+          />
+        <div></div>
       </div>
     </>
   );

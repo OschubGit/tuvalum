@@ -1,0 +1,22 @@
+.layout{
+    position: relative;
+
+    &__title{
+        padding: $padding;
+    }
+    
+    &__main{
+        @include border-box;
+        @include grid-templete(repeat(3, 1fr), 1fr);
+        width: 100%;
+        height: 100%;
+        padding: $padding;
+        gap: $grid-gap;
+        @media (max-width: $media-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $media-sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

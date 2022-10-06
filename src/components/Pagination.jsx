@@ -15,7 +15,7 @@ const Pagination = ({handleNextPage, handlePrevPage, currentPage, color, size, v
       <span>{currentPage}</span>
       <Button
         type="button"
-        disabled={false}
+        disabled={currentPage >= 14}
         className={`cButton cButton-${color} cButton-${size} cButton-${variant} ${fullwidth && "cButton-fullwidth"}`}
         onClick={handleNextPage}
       >

@@ -1,11 +1,11 @@
 .cButton{
+    @include rounded(4px);
     font-size: $typo-size-sm;
     font-family: $main-family;
     padding: $padding-xs;
     background-color: $primary-light;
     color: $common-white;
     width: auto;
-    border-radius: 4px;
     text-align: center;
     border: 0px;
     cursor: pointer;
@@ -55,22 +55,22 @@
 
 .cButton-fullwidth{
     @extend .cButton;
+    @include border-box;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .cButton-xs{
     @extend .cButton;
+    @include border-box;
     padding: 8px;
-    box-sizing: border-box;
 }
 .cButton-md{
     @extend .cButton;
+    @include border-box;
     padding: 16px;
-    box-sizing: border-box;
 }
 .cButton-xl{
     @extend .cButton;
+    @include border-box;
     padding: 24px;
-    box-sizing: border-box;
 }

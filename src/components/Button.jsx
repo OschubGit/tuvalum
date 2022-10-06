@@ -6,6 +6,7 @@ const Button = ({
   className = 'cButton cButton-primary',
   onClick,
   disabled,
+  icon,
 }) => {
   return (
     <button
@@ -14,6 +15,7 @@ const Button = ({
       disabled={disabled}
       className={className}
     >
+      {icon && icon}
       {children}
     </button>
   )

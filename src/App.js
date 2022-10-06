@@ -1,32 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles/main.css";
-import logo from "./logo.svg"
-import Logo from "./components/Logo";
 import ProductsList from "./containers/ProductsList";
 import CartProducts from "./components/CartProducts";
+import Header from "./components/Header";
+import { CartContext } from "./utils/context/cartContext";
 
 
 function App() {
-
+  const ctx = useContext(CartContext);
+console.log(ctx.active)
   return (
     <div className="layout">
       <header>
-        <div className="layout__header">
-          <Logo
-            width="150px"
-            logo={logo}
-            alt="logo"
-          />
-        </div>
+          <Header/>
       </header>
       <main>
         <ProductsList/>
       </main>
-      <aside>
+      <aside className={ctx.active === true && "active"}>
         <CartProducts/>
       </aside>
-
-      {/* <footer></footer> */}
     </div>
   );
 }
