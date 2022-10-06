@@ -1,0 +1,38 @@
+.card{
+    width: 100%;
+    height: auto;
+    border: 1px solid $primary-color;
+    background-color: $common-white;
+    gap: $grid-gap;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px $primary-light;
+    cursor: pointer;
+
+    &__src{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: $grey300;
+        
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__content{
+        display: grid;
+        grid-template-rows: 1fr 1fr auto;
+        padding: $padding-sm;
+
+        &-title{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+}

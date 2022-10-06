@@ -5,5 +5,5 @@ const PRODUCTS_URL = `${API_URL}/products`;
 /* const GET_PRODUCTS = (query) => `${PRODUCTS_URL}/${query}` */
 
 export function getProducts(page, query) {
-    return axios.get(`${PRODUCTS_URL}?_page=${page}`);
+    return axios.get(`${PRODUCTS_URL}?_page=${page}&_limit=15`);
   }

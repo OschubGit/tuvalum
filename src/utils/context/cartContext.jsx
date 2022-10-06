@@ -1,31 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createContext } from "react";
 
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = React.useState([]);
-  
-  const addToCart = ({product}) => {
-    const itemDuplicated = cart.findIndex((f) => f.title === product.title)
+  const [total, setTotal] = React.useState()
+  const initialValue = 0;
 
+  React.useEffect(() => {
+    const newAmmount = cart && cart.map((m) => parseFloat(m.price));
+    const result = newAmmount.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      initialValue
+    );
+    setTotal(result)
+  },[cart])
+
+  const addToCart = ({product}) => {
+    const itemDuplicated = cart.findIndex((f) => f.id === product.id);
     if (itemDuplicated !== -1) {
       /* cart[itemDuplicated].total += totalPrice */
-      console.log("ya has añadido este producto")
+      console.log("duplicado")
     } else {
       setCart([
         ...cart,
         {
-            title: product.title,
-            price: product.price,
+          id: product.id,
+          title: product.title,
+          price: product.price,
         },
-      ])
+      ]);
     }
-};
+  };
 
-console.log(cart);
+  const deleteItemFromCard = (id) => {
+    const deleteItem = cart && cart.filter((f) => f.id !== id)
+    setCart(deleteItem)
+  }
+
+  const deleteCart = () => {
+    setCart([])
+  }
+
   return (
-    <CartContext.Provider value={{ addToCart, cart }}>
+    <CartContext.Provider value={{ addToCart, cart, total, deleteItemFromCard, deleteCart }}>
       {children}
     </CartContext.Provider>
   );

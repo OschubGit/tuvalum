@@ -1,0 +1,87 @@
+.cButton{
+    font-size: $typo-size-sm;
+    font-family: $main-family;
+    padding: $padding-xs;
+    background-color: $primary-light;
+    color: $common-white;
+    width: auto;
+    border-radius: 4px;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+}
+
+.cBuutton:disabled, button[disabled]{
+   @extend .cButton; 
+    border: 0px;
+    background-color: $grey300;
+    color: $grey200;
+    &:hover{
+        background-color: $grey400;
+        color: $grey300;
+    }
+  }
+
+.cButton-primary{
+    @extend .cButton;
+    background-color: $primary-color;
+    color: $common-white;
+    &:hover{
+        background-color: $primary-dark;
+    }
+}
+
+.cButton-outlined{
+    @extend .cButton;
+    border: 0.2px solid $primary-dark;
+    background-color: $common-white;
+    color: $primary-dark;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        color: $common-white;
+        background-color: $light-blue;
+
+    }
+}
+
+.cButton-secondary{
+    @extend .cButton;
+    background-color: $secondary-color;
+    color: $common-white;
+    &:hover{
+        background-color: $secondary-dark;
+    }
+}
+
+.cButton-outlined{
+    @extend .cButton;
+    border: 0.2px solid $secondary-dark;
+    background-color: $common-white;
+    color: $secondary-dark;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        color: $secondary-dark;
+        background-color: $crimson-ua-2;
+
+    }
+}
+
+.cButton-fullwidth{
+    @extend .cButton;
+    width: 100%;
+}
+
+.cButton-xs{
+    @extend .cButton;
+    padding: 8px;
+}
+.cButton-md{
+    @extend .cButton;
+    padding: 16px;
+}
+.cButton-xl{
+    @extend .cButton;
+    padding: 24px;
+}
