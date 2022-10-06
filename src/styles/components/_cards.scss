@@ -1,11 +1,11 @@
 .card{
+    @include shadow(0px, 0px, 2px, $primary-light);
+    @include rounded(4px);
     width: 100%;
     height: auto;
     border: 1px solid $primary-color;
     background-color: $common-white;
     gap: $grid-gap;
-    border-radius: 4px;
-    box-shadow: 0px 0px 2px $primary-light;
     cursor: pointer;
 
     &__src{
@@ -23,8 +23,7 @@
     }
 
     &__content{
-        display: grid;
-        grid-template-rows: 1fr 1fr auto;
+        @include grid-templete(1fr, (1fr 1fr auto));
         padding: $padding-sm;
 
         &-title{
@@ -35,8 +34,7 @@
             -webkit-box-orient: vertical;
         }
         &-info{
-            display: flex;
-            justify-content: space-between;
+            @include flex-between;
             align-items: center;
         }
     }

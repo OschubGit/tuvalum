@@ -1,5 +1,4 @@
 @import "./utilities/variables";
-@import "./utilities/functions";
 @import "./utilities/mixins";
 
 @import "./base/base";
@@ -12,14 +11,12 @@
 @import "./layout/app";
 @import "./layout/header";
 @import "./layout/main";
-@import "./layout/sidebar";
-@import "./layout/footer";
+@import "./layout/aside";
 
+@import "./components/header";
 @import "./components/buttons";
 @import "./components/alerts";
 @import "./components/cards";
 @import "./components/navbar";
 @import "./components/texts";
 @import "./components/pagination";
-
-@import "./views/home";

@@ -1,5 +1,5 @@
 .pagination{
-    display: flex;
-    align-items: center;
-    gap: $padding;
+    @include flex-center;
+    gap: 12px;
+    padding: $padding-md;
 }

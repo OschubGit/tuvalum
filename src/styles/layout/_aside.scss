@@ -1,0 +1,19 @@
+.layout{
+    &__aside{
+        @include flex-direction-column;
+        justify-content: space-between;
+        padding: $padding;
+        position: sticky;
+        top: 0;
+        height: 100%;
+        @include border-box;
+        
+        &-checkoutButtons{
+            @include flex-direction-column;
+            gap: $grid-gap;
+        }
+        &-noProducts{
+            margin: $margin-sm 0;
+        }
+    }
+}
