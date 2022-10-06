@@ -1,0 +1,39 @@
+.title{
+    font-size: $title-size-md;
+    font-weight: 500;
+}
+
+.title-xxs{
+    font-size: $title-size-xxs;
+    font-weight: 400;
+    margin-bottom: $margin-xs;
+}
+.title-xs{
+    font-size: $title-size-xs;
+    font-weight: 400;
+    margin-bottom: $margin-xs;
+}
+
+.title-sm{
+    font-size: $title-size-sm;
+    font-weight: 400;
+    margin-bottom: $margin-sm;
+}
+
+.title-md{
+    font-size: $title-size-md;
+    font-weight: 500;
+    margin-bottom: $margin-md;
+}
+
+.title-lg{
+    font-size: $title-size-lg;
+    font-weight: 800;
+    margin-bottom: $margin-md;
+}
+
+.title-xl{
+    font-size: $title-size-xl;
+    font-weight: 800;
+    margin-bottom: $margin-md;
+}

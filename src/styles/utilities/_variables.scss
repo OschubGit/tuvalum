@@ -1,0 +1,107 @@
+    /* main palette color */
+   $prussian-blue: #036666;
+   $indigo-dye: #14746F;
+   $indigo-dye-2: #248277;
+   $usafa-blue: #358F80;
+   $honolulu-blue: #469D89;
+   $celadon-blue: #56AB91;
+   $blue-green: #67B99A;
+   $maximum-blue: #78C6A3;
+   $light-sky-blue: #88D4AB;
+   $light-blue: #99E2B4;
+
+    /* secondary palette color */
+   $persian-plum: #C42348;
+   $burgundy: #D91E36;
+   $antique-ruby: #DA344D;
+   $crimson-ua: #EC5766;
+   $crimson-ua-2: #EF7674;
+
+    /* Palette primary colors */
+   $primary-color: $celadon-blue;
+   $primary-light: $light-sky-blue;
+   $primary-dark: $prussian-blue;
+
+    /* Palette secondary colors */
+   $secondary-color: $antique-ruby;
+   $secondary-light: $crimson-ua;
+   $secondary-dark: $persian-plum;
+
+    /* grey colors */
+   $grey100: #f5f5f5;
+   $grey200: #eeeeee;
+   $grey300: #e0e0e0;
+   $grey400: #bdbdbd;
+   $grey500: #9e9e9e;
+   $grey600: #757575;
+   $grey700: #616161;
+   $grey800: #424242;
+   $grey900: #212121;
+
+    /* commons */
+   $common-black: #000;
+   $common-white: #fff;
+
+    /* color typography */
+   $light: $common-white;
+   $medium: $grey300;
+   $dark: $common-black;
+
+    /* primary gradient */
+   $gradient-top: linear-gradient(0deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-right: linear-gradient(90deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-bottom: linear-gradient(180deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-left: linear-gradient(270deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-top-right: linear-gradient(45deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-bottom-right: linear-gradient(135deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-top-left: linear-gradient(225deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-bottom-left: linear-gradient(315deg, #036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+   $gradient-radial: radial-gradient(#036666, #14746F, #248277, #358F80, #469D89, #56AB91, #67B99A, #78C6A3, #88D4AB, #99E2B4);
+
+    /* secondary gradient */
+   $gradient-top: linear-gradient(0deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-right: linear-gradient(90deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-bottom: linear-gradient(180deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-left: linear-gradient(270deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-top-right: linear-gradient(45deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-bottom-right: linear-gradient(135deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-top-left: linear-gradient(225deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-bottom-left: linear-gradient(315deg, #641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+   $gradient-radial: radial-gradient(#641220ff, #6e1423ff, #85182aff, #a11d33ff, #a71e34ff, #b21e35ff, #bd1f36ff, #c71f37ff, #da1e37ff, #e01e37ff);
+
+   /* paddings */
+   $padding: 24px;
+   $padding-xs: 8px;
+   $padding-sm: 16px;
+   $padding-md: 24px;
+   $padding-lg: 32px;
+   $padding-xl: 64px;
+
+   /* margins */
+   $margin: 24px;
+   $margin-xs: 8px;
+   $margin-sm: 16px;
+   $margin-md: 24px;
+   $margin-lg: 32px;
+   $margin-xl: 64px;
+
+   /* fonts */
+   $main-family: 'Montserrat', sans-serif;
+   $title: 'Poppins', sans-serif;
+   $paragraph: 'Montserrat', sans-serif;
+
+   /* typography titles sizes */
+   $title-size-xxs: 18px;
+   $title-size-xs: 24px;
+   $title-size-sm: 32px;
+   $title-size-md: 40px;
+   $title-size-lg: 64px;
+   $title-size-xl: 92px;
+
+   /* typography titles sizes */
+   $typo-caption: 8px;
+   $typo-size-xs: 12px;
+   $typo-size-sm: 16px;
+   $typo-size-md: 24px;
+   $typo-size-lg: 64px;
+   $typo-size-xl: 92px;
