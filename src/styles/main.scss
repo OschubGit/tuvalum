@@ -2,21 +2,15 @@
 @import "./utilities/mixins";
 
 @import "./base/base";
-@import "./base/reset";
 @import "./base/grid";
-
-@import "./themes/admin";
-@import "./themes/user";
 
 @import "./layout/app";
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/aside";
 
-@import "./components/header";
 @import "./components/buttons";
 @import "./components/alerts";
 @import "./components/cards";
-@import "./components/navbar";
 @import "./components/texts";
 @import "./components/pagination";

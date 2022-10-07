@@ -6,7 +6,7 @@ const Card = ({title, src, onclick, action, year, price}) => {
   return (
     <div className='card'>
         <div className='card__src'>
-          <img src={src ? src : defaultImg} alt="product" />
+          <img data-testid="src-product" src={src ? src : defaultImg} alt="product" />
         </div>
         <div className='card__content'>
           <h2 className='card__content-title title-xxs'>{title}</h2>

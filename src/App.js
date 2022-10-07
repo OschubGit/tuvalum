@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import "./styles/main.css";
 import ProductsList from "./containers/ProductsList";
-import CartProducts from "./components/CartProducts";
+import CartProducts from "./containers/CartProducts";
 import Header from "./components/Header";
 import { CartContext } from "./utils/context/cartContext";
 
 
 function App() {
   const ctx = useContext(CartContext);
-console.log(ctx.active)
   return (
     <div className="layout">
       <header>
@@ -17,7 +16,7 @@ console.log(ctx.active)
       <main>
         <ProductsList/>
       </main>
-      <aside className={ctx.active === true && "active"}>
+      <aside className={ctx.active === true ? "active" : null}>
         <CartProducts/>
       </aside>
     </div>

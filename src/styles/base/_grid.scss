@@ -4,42 +4,4 @@ $grid-main: repeat(12, minmax(0, 12fr));
 $grid-gap: 12px;
 $container-padding: 20px;
 $grid-main-info: repeat(12, minmax(0, 1fr));
-
-/* Size: xl */
-@media (max-width: 1200px) {
-    $grid-main: repeat(12, minmax(0, 1fr));
-    $grid-gap: 20px;
-    $grid-main-info: repeat(12, minmax(0, 1fr));
-}
-
-/* Size: md */
-@media (max-width: 900px) {
-    $grid-main: repeat(12, minmax(0, 1fr));
-    $grid-gap: 20px;
-    $grid-main-info: repeat(6, minmax(0, 1fr));
-}
-
-/* Size: sm */
-@media (max-width: 700px) {
-    $grid-main: repeat(8, minmax(0, 1fr));
-    $grid-gap: 15px;
-    $container-padding: 15px;
-    $grid-main-info: repeat(2, minmax(0, 1fr));
-}
-
-/* Size: xs */
-@media (max-width: 500px) {
-    $grid-main: repeat(6, minmax(0, 1fr));
-    $grid-gap: 10px;
-    $container-padding: 10px;
-    $grid-main-info: repeat(2, minmax(0, 1fr));
-}
-
-/* Size: xxs */
-@media (max-width: 320px) {
-    $grid-main: repeat(4, minmax(0, 1fr));
-    $grid-gap: 10px;
-    $container-padding: 10px;
-    $grid-main-info: repeat(2, minmax(0, 1fr));
-}
   
