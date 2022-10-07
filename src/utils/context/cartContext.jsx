@@ -10,13 +10,14 @@ const CartContextProvider = ({ children }) => {
   const initialValue = 0;
 
   React.useEffect(() => {
-    const newAmmount = cart && cart.map((m) => parseFloat(m.price));
+    const newAmmount = cart && cart.map((m) => parseInt(m.price.split(".").join("")));
     const result = newAmmount.reduce(
       (previousValue, currentValue) => previousValue + currentValue,
       initialValue
     );
     setTotal(result)
   },[cart])
+
 
   const activeMenu = () => {
     setActive(!active)

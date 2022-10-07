@@ -15,7 +15,11 @@ const ProductsList = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       const productsPages = await getProducts(currentPage);
-      setProducts(productsPages.data);
+      if (productsPages.status === 200) {
+        setProducts(productsPages.data);
+      } else{
+        console.log("error loading data");
+      }
     };
     fetchData();
   }, [currentPage]);
@@ -44,7 +48,7 @@ const ProductsList = () => {
           <Card
             key={index}
             title={m.title}
-            year={"Año " + m.year}
+            year={m.year}
             price={m.price}
             src={m.image}
             onclick={() => handleAddToCart(m)}

@@ -6,11 +6,17 @@
         position: sticky;
         top: 0;
         height: 100%;
+        max-height: 100vh;
+        overflow-y: scroll;
         @include border-box;
         
         &-checkoutButtons{
             @include flex-direction-column;
             gap: $grid-gap;
+            background-color: $common-white;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
         }
         &-noProducts{
             margin: $margin-sm 0;
