@@ -26,7 +26,6 @@ const ProductsList = () => {
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + paginationDefault);
-    ctx.addToCart();
   };
 
   const handleAddToCart = (product) => {

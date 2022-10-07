@@ -12,9 +12,9 @@ const Pagination = ({handleNextPage, handlePrevPage, currentPage, color, size, v
       >
         Anterior
       </Button>
-      <span>{currentPage}</span>
+      <p data-testid="current-page">{currentPage}</p>
       <Button
-        type="button"
+        type="button" 
         disabled={currentPage >= 14}
         className={`cButton cButton-${color} cButton-${size} cButton-${variant} ${fullwidth && "cButton-fullwidth"}`}
         onClick={handleNextPage}

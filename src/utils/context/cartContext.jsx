@@ -25,8 +25,7 @@ const CartContextProvider = ({ children }) => {
   const addToCart = ({product}) => {
     const itemDuplicated = cart.findIndex((f) => f.id === product.id);
     if (itemDuplicated !== -1) {
-      /* cart[itemDuplicated].total += totalPrice */
-      console.log("duplicado")
+      alert("Este producto ya está en la cesta")
     } else {
       setCart([
         ...cart,

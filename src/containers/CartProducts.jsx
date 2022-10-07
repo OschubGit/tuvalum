@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../utils/context/cartContext";
-import Alerts from "./Alerts";
-import Button from "./Button";
+import Alerts from "../components/Alerts";
+import Button from "../components/Button";
 
 const CartProducts = () => {
   const ctx = useContext(CartContext);
@@ -51,7 +51,7 @@ const CartProducts = () => {
                 disabled={ctx.total === 0}
                 className="cButton cButton-primary cButton-xs cButton-fullwidth"
             >
-              {ctx.total ? "Comprar por "+ ctx.total : "Comprar"}
+              {ctx.total ? "Comprar por "+ ctx.total+"€" : "Comprar"}
             </Button>
             <Button
                 type="button"

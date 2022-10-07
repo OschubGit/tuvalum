@@ -1,0 +1,16 @@
+.layout{
+    &__header{
+        @include border-box;
+        @include flex-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: $padding-sm;
+        &-menu{
+            display: none;
+            @media (max-width: 640px) {
+                display: flex;
+            }
+        }
+    }
+}
